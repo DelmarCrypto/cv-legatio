@@ -21,6 +21,11 @@
             padding: 30px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Pour positionner l'image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
         .header h1 {
             font-size: 28px;
@@ -31,6 +36,17 @@
             font-size: 14px;
             margin: 5px 0 0;
             opacity: 0.9;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Rendre l'image circulaire */
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            object-fit: cover; /* S'assurer que l'image remplit le cercle */
+            border: 3px solid #FFD700; /* Bordure dorée */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .container {
             display: flex;
@@ -147,6 +163,7 @@
 </head>
 <body>
     <div class="header">
+        <img src="ceo legatio.png" alt="Photo de Rodrigues Delmar" class="profile-pic">
         <h1>Rodrigues Delmar</h1>
         <p>Fondateur & CEO de Legatio.finance – Expert en Finance Décentralisée</p>
         <p>rodrigues.delmar@example.com | +33 123 456 789 | Paris, France | <a href="https://legatio.finance">legatio.finance</a></p>
