@@ -11,7 +11,7 @@
             color: #333;
         }
         .header {
-            background-color: #1E3A8A; /* Bleu nuit */
+            background-color: #1E3A8A;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -30,7 +30,7 @@
             margin: 0 auto;
         }
         .sidebar {
-            background-color: #F3F4F6; /* Gris clair */
+            background-color: #F3F4F6;
             width: 30%;
             padding: 20px;
         }
@@ -95,9 +95,9 @@
     <div class="container">
         <div class="sidebar">
             <h2>Réussites Clés</h2>
-            <p><strong>Rendement :</strong> 1000 % sur 7 ans (20 000 € → 300 000 €)</p>
-            <p><strong>Portefeuille Crypto :</strong> Valeur nette <span class="portfolio-value" id="net-worth-value">€1 700 000</span> (au <span id="current-date"></span>)</p>
-            <p class="update-note">Mise à jour en temps réel via API CoinGecko</p>
+            <p><strong>Rendement :</strong> 10 184 % sur 7 ans (20 000 € → 2 056 833 €)</p>
+            <p><strong>Portefeuille Crypto :</strong> Valeur nette <span class="portfolio-value">€2 056 833</span> (au 17 mars 2025)</p>
+            <p class="update-note">Basé sur 17,68 BTC, 343,23 ETH, 186 046,51 XRP</p>
             <p><strong>Succès Phares :</strong></p>
             <ul>
                 <li>Ethereum (DeFi)</li>
@@ -129,7 +129,7 @@
         <div class="main">
             <h2>Résumé Exécutif</h2>
             <div class="executive-summary">
-                <p>Trader et expert en finance décentralisée depuis 2017, j’ai généré 300 000 € (1000 % sur 7 ans) à partir de 20 000 € avec des succès sur Ethereum, XRP, Chainlink, Fetch.ai, et Elrond (crowdfunding). Fondateur de Legatio.finance, une plateforme Web3 lancée en février 2025 pour tokeniser des actifs réels (RWAs) et offrir des prêts décentralisés, je finalise actuellement le site internet. Formé chez Admiral Markets et eToro (2017), je cible un marché de 16T$ d’ici 2030 avec une solution sécurisée (CertiK), conforme (MiCA/SEC), et scalable (Layer 2). Objectif : lever 5M$ pour accélérer le lancement.</p>
+                <p>Trader et expert en finance décentralisée depuis 2017, j’ai transformé 20 000 € en un portefeuille d’une valeur nette de 2 056 833 € (10 184 % sur 7 ans) avec des succès sur Ethereum, XRP, Chainlink, Fetch.ai, et Elrond (crowdfunding). Fondateur de Legatio.finance, une plateforme Web3 lancée en février 2025 pour tokeniser des actifs réels (RWAs) et offrir des prêts décentralisés, je finalise le site internet (mars 2025). Formé chez Admiral Markets et eToro (2017), je cible un marché de 16T$ d’ici 2030 avec une solution sécurisée (CertiK), conforme (MiCA/SEC), et scalable (Layer 2). Objectif : lever 5M$ pour accélérer le lancement.</p>
             </div>
 
             <h2>Expérience Professionnelle</h2>
@@ -142,8 +142,8 @@
             </ul>
             <p><strong>Trader et Investisseur Indépendant</strong> <em>Janvier 2017 – Présent</em></p>
             <ul>
-                <li>Transformation de 20 000 € en 300 000 € (1000 % sur 7 ans).</li>
-                <li>Gestion d’un portefeuille crypto atteignant une valeur nette de <span class="portfolio-value" id="net-worth-value-duplicate">€1 700 000</span> (17,68 BTC, 343,23 ETH, 186 046,51 XRP ; total > 2M€).</li>
+                <li>Transformation de 20 000 € en un portefeuille crypto d’une valeur nette de 2 056 833 € (10 184 % sur 7 ans).</li>
+                <li>Gestion d’un portefeuille diversifié (17,68 BTC, 343,23 ETH, 186 046,51 XRP) atteignant une valeur totale supérieure à 2,3M€ (passifs : 300 000 €).</li>
                 <li>Réussites : Ethereum (DeFi), XRP (paiements), Chainlink (2020), Fetch.ai (IA), Elrond (crowdfunding 2019).</li>
                 <li>Méthodes : Analyse on-chain, trading technique (Admiral Markets/eToro), stratégies early-stage.</li>
             </ul>
@@ -163,7 +163,7 @@
             </ul>
 
             <div class="investor-proposal">
-                <p>"1000 % de rendement sur 7 ans, un portefeuille de plus de 2M€, et un lancement récent (février 2025) de Legatio.finance : investissez 5M$ dans une plateforme Web3 tokenisant un marché de 16T$ de RWAs, avec sécurité, conformité, et scalabilité assurées."</p>
+                <p>"10 184 % de rendement sur 7 ans, un portefeuille de 2,056 M€, et un lancement récent (février 2025) de Legatio.finance : investissez 5M$ dans une plateforme Web3 tokenisant un marché de 16T$ de RWAs, avec sécurité, conformité, et scalabilité assurées."</p>
             </div>
         </div>
     </div>
@@ -180,55 +180,14 @@
             return decimal ? `${formattedInteger},${decimal}` : formattedInteger;
         }
 
-        function formatDate() {
-            const now = new Date();
-            return now.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-        }
+        // Fixer la valeur nette à 2 056 833 € pour ce CV statique
+        const netWorth = 2056833;
+        document.querySelectorAll('.portfolio-value').forEach(el => {
+            el.textContent = `€${formatNumber(netWorth, 0)}`;
+        });
 
-        const btcAmountFixed = 17.68;
-        const ethAmountFixed = 343.23;
-        const xrpAmountFixed = 186046.51;
-        const liabilities = 300000;
-
-        let isUpdating = false;
-
-        async function updatePortfolio() {
-            if (isUpdating) return;
-            isUpdating = true;
-
-            try {
-                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,ripple&vs_currencies=eur', {
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (!response.ok) throw new Error(`Erreur HTTP: ${response.status}`);
-
-                const data = await response.json();
-                const btcPrice = data.bitcoin?.eur || 0;
-                const ethPrice = data.ethereum?.eur || 0;
-                const xrpPrice = data.ripple?.eur || 0;
-
-                const btcValue = btcAmountFixed * btcPrice;
-                const ethValue = ethAmountFixed * ethPrice;
-                const xrpValue = xrpAmountFixed * xrpPrice;
-                const total = btcValue + ethValue + xrpValue;
-                const netWorth = total - liabilities;
-
-                document.getElementById('net-worth-value').textContent = `€${formatNumber(netWorth, 0)}`;
-                document.getElementById('net-worth-value-duplicate').textContent = `€${formatNumber(netWorth, 0)}`;
-                document.getElementById('current-date').textContent = formatDate();
-
-                const now = new Date();
-                document.getElementById('update-time') && (document.getElementById('update-time').textContent = now.toLocaleTimeString('fr-FR'));
-            } catch (error) {
-                console.error('Erreur:', error);
-            } finally {
-                isUpdating = false;
-            }
-        }
-
-        setInterval(updatePortfolio, 120000);
-        updatePortfolio();
+        // Ajouter la date statique au démarrage
+        document.getElementById('current-date') && (document.getElementById('current-date').textContent = '17 mars 2025');
     </script>
 </body>
 </html>
