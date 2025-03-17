@@ -18,14 +18,16 @@
         .header {
             background: linear-gradient(135deg, #1E3A8A, #2A4BA6);
             color: #fff;
-            padding: 30px;
-            text-align: center;
+            padding: 20px 30px; /* Réduit padding pour mieux centrer */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: relative; /* Pour positionner l'image */
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            align-items: center; /* Centrer verticalement */
+            justify-content: flex-start; /* Aligner à gauche */
+            min-height: 140px; /* Hauteur minimale pour le centrage */
+        }
+        .header-content {
+            margin-left: 20px; /* Espace réduit entre l'image et le texte */
+            text-align: left; /* Aligner le texte à gauche */
         }
         .header h1 {
             font-size: 28px;
@@ -41,9 +43,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%; /* Rendre l'image circulaire */
-            position: absolute;
-            left: 30px;
-            top: 30px;
+            margin-left: 30px; /* Marge à gauche pour ne pas coller au bord */
             object-fit: contain; /* Afficher l'image entière sans recadrage */
             border: 3px solid #FFD700; /* Bordure dorée */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -165,9 +165,11 @@
 <body>
     <div class="header">
         <img src="ceo legatio.png" alt="Photo de Rodrigues Delmar" class="profile-pic">
-        <h1>Rodrigues Delmar</h1>
-        <p>Fondateur & CEO de Legatio.finance – Expert en Finance Décentralisée</p>
-        <p>rodrigues.delmar@example.com | +33 123 456 789 | Paris, France | <a href="https://legatio.finance">legatio.finance</a></p>
+        <div class="header-content">
+            <h1>Rodrigues Delmar</h1>
+            <p>Fondateur & CEO de Legatio.finance – Expert en Finance Décentralisée</p>
+            <p>rodrigues.delmar@example.com | +33 123 456 789 | Paris, France | <a href="https://legatio.finance">legatio.finance</a></p>
+        </div>
     </div>
 
     <div class="container">
