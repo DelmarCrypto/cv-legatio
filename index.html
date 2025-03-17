@@ -38,15 +38,16 @@
             opacity: 0.9;
         }
         .profile-pic {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%; /* Rendre l'image circulaire */
             position: absolute;
             left: 30px;
             top: 30px;
-            object-fit: cover; /* S'assurer que l'image remplit le cercle */
+            object-fit: contain; /* Afficher l'image entière sans recadrage */
             border: 3px solid #FFD700; /* Bordure dorée */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #000; /* Fond noir pour combler les espaces transparents */
         }
         .container {
             display: flex;
