@@ -95,9 +95,9 @@
     <div class="container">
         <div class="sidebar">
             <h2>Réussites Clés</h2>
-            <p><strong>Rendement :</strong> 10 184 % sur 7 ans (20 000 € → 2 056 833 €)</p>
+            <p><strong>Rendement :</strong> 7 756 % sur 7 ans (30 000 € → >2M$)</p>
             <p><strong>Portefeuille Crypto :</strong> Valeur nette <span class="portfolio-value">€2 056 833</span> (au 17 mars 2025)</p>
-            <p class="update-note">Basé sur 17,68 BTC, 343,23 ETH, 186 046,51 XRP</p>
+            <p class="update-note">Actifs totaux : €2 356 833 (passifs : €300 000)</p>
             <p><strong>Succès Phares :</strong></p>
             <ul>
                 <li>Ethereum (DeFi)</li>
@@ -129,7 +129,7 @@
         <div class="main">
             <h2>Résumé Exécutif</h2>
             <div class="executive-summary">
-                <p>Trader et expert en finance décentralisée depuis 2017, j’ai transformé 20 000 € en un portefeuille d’une valeur nette de 2 056 833 € (10 184 % sur 7 ans) avec des succès sur Ethereum, XRP, Chainlink, Fetch.ai, et Elrond (crowdfunding). Fondateur de Legatio.finance, une plateforme Web3 lancée en février 2025 pour tokeniser des actifs réels (RWAs) et offrir des prêts décentralisés, je finalise le site internet (mars 2025). Formé chez Admiral Markets et eToro (2017), je cible un marché de 16T$ d’ici 2030 avec une solution sécurisée (CertiK), conforme (MiCA/SEC), et scalable (Layer 2). Objectif : lever 5M$ pour accélérer le lancement.</p>
+                <p>Trader et expert en finance décentralisée depuis 2017, j’ai transformé un investissement total de 30 000 € en un portefeuille crypto de plus de 2M$ (7 756 % sur 7 ans), avec une valeur nette actuelle de 2 056 833 € après un passif de 300 000 €, grâce à des succès sur Ethereum, XRP, Chainlink, Fetch.ai, et Elrond (crowdfunding). Fondateur de Legatio.finance, une plateforme Web3 lancée en février 2025 pour tokeniser des actifs réels (RWAs) et offrir des prêts décentralisés, je finalise le site internet (mars 2025). Formé chez Admiral Markets et eToro (2017), je cible un marché de 16T$ d’ici 2030 avec une solution sécurisée (CertiK), conforme (MiCA/SEC), et scalable (Layer 2). Objectif : lever 5M$ pour accélérer le lancement.</p>
             </div>
 
             <h2>Expérience Professionnelle</h2>
@@ -142,8 +142,8 @@
             </ul>
             <p><strong>Trader et Investisseur Indépendant</strong> <em>Janvier 2017 – Présent</em></p>
             <ul>
-                <li>Transformation de 20 000 € en un portefeuille crypto d’une valeur nette de 2 056 833 € (10 184 % sur 7 ans).</li>
-                <li>Gestion d’un portefeuille diversifié (17,68 BTC, 343,23 ETH, 186 046,51 XRP) atteignant une valeur totale supérieure à 2,3M€ (passifs : 300 000 €).</li>
+                <li>Transformation de 30 000 € investis au total en un portefeuille crypto de plus de 2M$ (7 756 % sur 7 ans), avec une valeur totale de 2 356 833 € et une valeur nette de 2 056 833 € après 300 000 € de passifs issus d’un levier stratégique.</li>
+                <li>Gestion d’un portefeuille diversifié (17,68 BTC, 343,23 ETH, 186 046,51 XRP) atteignant une valorisation de 2,36M€.</li>
                 <li>Réussites : Ethereum (DeFi), XRP (paiements), Chainlink (2020), Fetch.ai (IA), Elrond (crowdfunding 2019).</li>
                 <li>Méthodes : Analyse on-chain, trading technique (Admiral Markets/eToro), stratégies early-stage.</li>
             </ul>
@@ -163,7 +163,7 @@
             </ul>
 
             <div class="investor-proposal">
-                <p>"10 184 % de rendement sur 7 ans, un portefeuille de 2,056 M€, et un lancement récent (février 2025) de Legatio.finance : investissez 5M$ dans une plateforme Web3 tokenisant un marché de 16T$ de RWAs, avec sécurité, conformité, et scalabilité assurées."</p>
+                <p>"7 756 % de rendement sur 7 ans à partir de 30 000 €, un portefeuille de plus de 2M$, et un lancement récent (février 2025) de Legatio.finance : investissez 5M$ dans une plateforme Web3 tokenisant un marché de 16T$ de RWAs, avec sécurité, conformité, et scalabilité assurées."</p>
             </div>
         </div>
     </div>
@@ -180,13 +180,12 @@
             return decimal ? `${formattedInteger},${decimal}` : formattedInteger;
         }
 
-        // Fixer la valeur nette à 2 056 833 € pour ce CV statique
+        // Valeurs statiques basées sur la réalité
         const netWorth = 2056833;
+        const totalAssets = 2356833;
         document.querySelectorAll('.portfolio-value').forEach(el => {
             el.textContent = `€${formatNumber(netWorth, 0)}`;
         });
-
-        // Ajouter la date statique au démarrage
         document.getElementById('current-date') && (document.getElementById('current-date').textContent = '17 mars 2025');
     </script>
 </body>
