@@ -6,55 +6,170 @@
     <title>CV - Rodrigues Delmar</title>
     <style>
         body {
-            background-color: #f4f4f4;
+            margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
             color: #333;
-            margin: 0;
-            padding: 20px;
         }
-        .cv-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
+        .header {
+            background-color: #1E3A8A; /* Bleu nuit */
+            color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #2c3e6b; /* Bleu foncé de votre portefeuille */
             text-align: center;
         }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .header p {
+            font-size: 12px;
+            margin: 5px 0 0;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sidebar {
+            background-color: #F3F4F6; /* Gris clair */
+            width: 30%;
+            padding: 20px;
+        }
+        .main {
+            background-color: #fff;
+            width: 70%;
+            padding: 20px;
+        }
         h2 {
-            color: #3b4a77;
-            border-bottom: 2px solid #a3bffa;
+            color: #1E3A8A;
+            font-size: 18px;
+            border-bottom: 2px solid #1E3A8A;
             padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .sidebar h2 {
+            color: #1E3A8A;
+            font-size: 16px;
         }
         .portfolio-value {
-            color: #34c759; /* Vert pour la valeur nette */
+            color: #1E3A8A;
             font-weight: bold;
         }
         .update-note {
             font-size: 0.9em;
             color: #666;
         }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .executive-summary {
+            border: 1px solid #1E3A8A;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .investor-proposal {
+            background-color: #1E3A8A;
+            color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="cv-container">
+    <div class="header">
         <h1>Rodrigues Delmar</h1>
-        <p style="text-align: center;">[email@example.com] | [+33 123 456 789] | [linkedin.com/in/rodrigues-delmar]</p>
+        <p>Fondateur & CEO de Legatio.finance – Expert en Finance Décentralisée</p>
+        <p>rodrigues.delmar@example.com | +33 123 456 789 | Paris, France | legatio.finance</p>
+    </div>
 
-        <h2>Réalisations Financières</h2>
-        <ul>
-            <li>Gestion d’un portefeuille crypto personnel avec une valeur nette de <span class="portfolio-value" id="net-worth-value">€1 700 000</span> 
-                (Total Assets: <span id="total-assets">€2 000 000</span> | Liabilities: <span id="total-liabilities">€300 000</span>).
-                <span class="update-note">Dernière mise à jour : <span id="update-time"></span></span>
-            </li>
-            <li>Composition : Bitcoin (17,68 BTC), Ethereum (343,23 ETH), XRP (186 046,51 XRP).</li>
-            <li>Interface personnalisée avec mise à jour en temps réel via API CoinGecko.</li>
-        </ul>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Réussites Clés</h2>
+            <p><strong>Rendement :</strong> 1000 % sur 7 ans (20 000 € → 300 000 €)</p>
+            <p><strong>Portefeuille Crypto :</strong> Valeur nette <span class="portfolio-value" id="net-worth-value">€1 700 000</span> (au <span id="current-date"></span>)</p>
+            <p class="update-note">Mise à jour en temps réel via API CoinGecko</p>
+            <p><strong>Succès Phares :</strong></p>
+            <ul>
+                <li>Ethereum (DeFi)</li>
+                <li>XRP (Paiements)</li>
+                <li>Chainlink (Oracles 2020)</li>
+                <li>Fetch.ai (IA)</li>
+                <li>Elrond (Crowdfunding 2019)</li>
+            </ul>
+            <h2>Legatio.finance</h2>
+            <p><strong>Lancé :</strong> Février 2025</p>
+            <p><strong>Objectif :</strong> Tokenisation RWAs</p>
+            <p><strong>Levée cible :</strong> 5M$</p>
+            <h2>Compétences</h2>
+            <ul>
+                <li>Analyse on-chain</li>
+                <li>Trading crypto (7 ans)</li>
+                <li>Tokenisation RWAs</li>
+                <li>Conformité MiCA/SEC</li>
+                <li>Scalabilité Layer 2</li>
+            </ul>
+            <h2>Centres d’Intérêt</h2>
+            <ul>
+                <li>DeFi & RWAs</li>
+                <li>Blockchain institutionnelle</li>
+                <li>Crowdfunding Web3</li>
+            </ul>
+        </div>
 
-        <!-- Ajoutez ici d'autres sections comme Expérience, Formation, etc. -->
+        <div class="main">
+            <h2>Résumé Exécutif</h2>
+            <div class="executive-summary">
+                <p>Trader et expert en finance décentralisée depuis 2017, j’ai généré 300 000 € (1000 % sur 7 ans) à partir de 20 000 € avec des succès sur Ethereum, XRP, Chainlink, Fetch.ai, et Elrond (crowdfunding). Fondateur de Legatio.finance, une plateforme Web3 lancée en février 2025 pour tokeniser des actifs réels (RWAs) et offrir des prêts décentralisés, je finalise actuellement le site internet. Formé chez Admiral Markets et eToro (2017), je cible un marché de 16T$ d’ici 2030 avec une solution sécurisée (CertiK), conforme (MiCA/SEC), et scalable (Layer 2). Objectif : lever 5M$ pour accélérer le lancement.</p>
+            </div>
+
+            <h2>Expérience Professionnelle</h2>
+            <p><strong>Fondateur & CEO – Legatio.finance</strong> <em>Février 2025 – Mars 2025 (en cours)</em></p>
+            <ul>
+                <li>Lancement de Legatio.finance, une plateforme tokenisant des actifs réels (immobilier, or, obligations) pour des prêts décentralisés sur Ethereum Layer 2 (Arbitrum/Base).</li>
+                <li>Réalisations : Site en finalisation (mars 2025), partenariats avec Chainlink et LBank, préparation du testnet 2025.</li>
+                <li>Vision : Devenir la référence pour les RWAs (marché de 16T$ d’ici 2030).</li>
+                <li>Objectif de levée : 5M$ (50 % développement/audits, 30 % marketing, 20 % opérations).</li>
+            </ul>
+            <p><strong>Trader et Investisseur Indépendant</strong> <em>Janvier 2017 – Présent</em></p>
+            <ul>
+                <li>Transformation de 20 000 € en 300 000 € (1000 % sur 7 ans).</li>
+                <li>Gestion d’un portefeuille crypto atteignant une valeur nette de <span class="portfolio-value" id="net-worth-value-duplicate">€1 700 000</span> (17,68 BTC, 343,23 ETH, 186 046,51 XRP ; total > 2M€).</li>
+                <li>Réussites : Ethereum (DeFi), XRP (paiements), Chainlink (2020), Fetch.ai (IA), Elrond (crowdfunding 2019).</li>
+                <li>Méthodes : Analyse on-chain, trading technique (Admiral Markets/eToro), stratégies early-stage.</li>
+            </ul>
+
+            <h2>Formation</h2>
+            <p><strong>Admiral Markets – Formation au Trading</strong> <em>Janvier – Mars 2017</em></p>
+            <ul>
+                <li>Trading forex/CFD/crypto, analyse technique (RSI, MACD), gestion des risques.</li>
+            </ul>
+            <p><strong>eToro – Formation au Trading et Investissement</strong> <em>Avril – Juin 2017</em></p>
+            <ul>
+                <li>Stratégies d’investissement, trading social, exécution sur exchanges.</li>
+            </ul>
+            <p><strong>Autodidacte en Blockchain & DeFi</strong> <em>2017 – Présent</em></p>
+            <ul>
+                <li>7 ans de pratique, expertise on-chain et tokenomics (Ethereum, Elrond).</li>
+            </ul>
+
+            <div class="investor-proposal">
+                <p>"1000 % de rendement sur 7 ans, un portefeuille de plus de 2M€, et un lancement récent (février 2025) de Legatio.finance : investissez 5M$ dans une plateforme Web3 tokenisant un marché de 16T$ de RWAs, avec sécurité, conformité, et scalabilité assurées."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Mars 2025 – Confidentiel pour investisseurs</p>
     </div>
 
     <script>
@@ -65,7 +180,12 @@
             return decimal ? `${formattedInteger},${decimal}` : formattedInteger;
         }
 
-        const btcAmountFixed = 17.68; // Votre nouvelle quantité
+        function formatDate() {
+            const now = new Date();
+            return now.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+        }
+
+        const btcAmountFixed = 17.68;
         const ethAmountFixed = 343.23;
         const xrpAmountFixed = 186046.51;
         const liabilities = 300000;
@@ -95,14 +215,13 @@
                 const netWorth = total - liabilities;
 
                 document.getElementById('net-worth-value').textContent = `€${formatNumber(netWorth, 0)}`;
-                document.getElementById('total-assets').textContent = `€${formatNumber(total, 0)}`;
-                document.getElementById('total-liabilities').textContent = `€${formatNumber(liabilities, 0)}`;
+                document.getElementById('net-worth-value-duplicate').textContent = `€${formatNumber(netWorth, 0)}`;
+                document.getElementById('current-date').textContent = formatDate();
 
                 const now = new Date();
-                document.getElementById('update-time').textContent = now.toLocaleTimeString('fr-FR');
+                document.getElementById('update-time') && (document.getElementById('update-time').textContent = now.toLocaleTimeString('fr-FR'));
             } catch (error) {
                 console.error('Erreur:', error);
-                document.getElementById('update-time').textContent = `Erreur: ${error.message}`;
             } finally {
                 isUpdating = false;
             }
