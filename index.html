@@ -18,7 +18,7 @@
         .header {
             background: linear-gradient(135deg, #1E3A8A, #2A4BA6);
             color: #fff;
-            padding: 20px 30px;
+            padding: 15px 30px; /* Réduit le padding pour un look plus symétrique */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center; /* Centrer verticalement */
@@ -47,7 +47,7 @@
             border: 3px solid #FFD700; /* Bordure dorée */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             background-color: #000; /* Fond noir pour combler les espaces transparents */
-            margin: 20px auto; /* Centrer l'image horizontalement dans la sidebar */
+            margin: 30px auto 20px auto; /* Plus d'espace au-dessus et en dessous */
             display: block; /* S'assurer que l'image est un bloc pour le centrage */
         }
         .container {
@@ -163,6 +163,23 @@
             padding: 5px;
             transition: background 0.3s;
         }
+        hr {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        /* Responsivité pour petits écrans */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .main {
+                width: 100%;
+                border-right: none;
+            }
+            .sidebar {
+                border-bottom: 1px solid #e0e4e8;
+            }
+        }
     </style>
 </head>
 <body>
@@ -177,6 +194,7 @@
     <div class="container">
         <div class="sidebar">
             <img src="ceo legatio.png" alt="Photo de Rodrigues Delmar" class="profile-pic">
+            <hr>
             <h2>Réussites Clés</h2>
             <p><strong>Rendement :</strong> <span class="highlight">6 756 % sur 7 ans</span> (30 000 € → <span class="portfolio-value">€2 056 833</span>)</p>
             <p><strong>Portefeuille Crypto :</strong> Valeur nette <span class="portfolio-value">€2 056 833</span></p>
